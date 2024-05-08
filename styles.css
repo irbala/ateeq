@@ -1,0 +1,296 @@
+/* Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    background-color: #E4E3D8; /* Beige background */
+    color: #6B6347;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+
+#header {
+    transition: height 0.3s ease; /* Add transition for header height */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #E4E3D8; /* Header background color */
+    z-index: 1000;
+}
+
+/* Add margin to the main content to prevent it from being overlapped by the fixed header */
+main {
+    margin-top: 180px; /* Adjust as needed based on the header height */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #E4E3D8; /* Header background color */
+    border-bottom: 1px solid #6B6347; /* Header border */
+
+}
+
+.brand-header {
+    font-size: 15px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul li {
+    
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #6B6347;
+
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #6b634725;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+
+}
+
+nav ul li a:hover {
+    background-color: #6b634741;
+}
+
+img {
+width: 200px;
+margin: 30px;
+}
+
+
+.cover-page {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Set the width to cover the entire width of the page */
+    z-index: -1; /* Ensure the image stays behind other content */
+}
+
+.index-about {
+    border-bottom: 1px solid #6B6347; /* Brown border */
+    margin: 0 auto; /* Center the div horizontally */
+    width: 70%;
+}
+
+
+.learn-more-button {
+    color: #6B6347;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    background-color: #6b634727;
+    border-radius: 5px;
+    border: 0;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.learn-more-button:hover {
+    background-color: #6b634741; /* Change background color on hover */
+}
+
+
+
+.about-section {
+    border-bottom: 1px solid #6B6347; /* Brown border */
+    width: 80%;
+    margin: 0 auto; /* Center the div horizontally */
+}
+
+
+.visual-identity-pic {
+    width: 100%;
+}
+
+
+/* Container Styles */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.checkout-btn {
+    color: #6B6347;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #6b634727;
+    border-radius: 5px;
+    border: 0;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.checkout-btn:hover {
+
+    background-color: #6b634741;
+
+}
+
+
+/* Product Styles */
+.product {
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 16px;
+}
+
+/* Cart Styles */
+.cart {
+    display: none; /* Hide cart by default */
+    position: absolute;
+    top: calc(100% + 10px); /* Adjust the distance from the button */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 999; /* Ensure the cart appears above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+.show-cart-btn:focus + .cart,
+.cart:hover {
+    display: block; /* Show cart when button is focused or cart is hovered */
+}
+
+.add-to-cart-btn {
+    color: #6B6347;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #6b634727;
+    border-radius: 5px;
+    border: 0;
+    transition: background-color 0.3s ease; /* Smooth transition */
+
+}
+
+.add-to-cart-btn:hover {
+    background-color: #6b634741;
+
+}
+
+.add-to-cart-btn {
+    color: #6B6347;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #6b634727;
+    border-radius: 5px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #6b634741;
+
+}
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: url(img/4.png);
+    width: 100%;
+    margin: auto;
+    padding: 200px;
+}
+
+.contact-info {
+    opacity: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: #6B6347;
+    width: 60%;
+    color: #E4E3D8;
+    text-align: center; /* Center-align all text content */
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #E4E3D8;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #6B6347; /* Brown border */
+}
+
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    main {
+        margin-top: 270px; /* Adjust main margin for smaller screens */
+    }
+    
+    .contact-page {
+        padding: 0;
+    }
+    .contact-info {
+        margin: 0;
+        padding: 0;
+        width: 100%; /* Adjust contact info width for smaller screens */
+    }
+
+      /* Additional adjustments for smaller screens */
+      #header {
+        height: 80px; /* Decrease header height for better visibility */
+    }
+    .header {
+        
+        text-align: center;
+        padding: 20px; /* Adjust header padding for better spacing */
+    }
+    nav ul li {
+        margin: 5px;
+display: flex;       
+flex-direction: column;
+margin-right: 5px; /* Reduce margin between navigation items */
+    }
+    img {
+        width: 150px; /* Reduce image size for better fit */
+        margin: 20px; /* Adjust image margin for better spacing */
+    }
+}

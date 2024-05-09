@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة التسوق - متجر عتيق</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <div class="brand-header">
+                <h1> متجر عتيق</h1>
+                <h3>   عبق التراث، روح الفخر</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="shop.html">المتجر</a></li>
+                    <li><a href="about.html">عن عتيق</a></li>
+                    <li><a href="cart.html" class="cart-btn">سلة التسوق</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main>
+    <div class="container">
+        <h2>سلة التسوق</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be added here dynamically using JavaScript -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Function to display cart items
+        function displayCartItems() {
+            // Get the cart items from local storage
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            // Get the UL element where cart items will be displayed
+            const cartList = document.getElementById('cart-items');
+            // Clear any existing content
+            cartList.innerHTML = '';
+            // Loop through each cart item and create a list item to display it
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price} ريال`;
+                cartList.appendChild(li);
+            });
+        }
+        // Call the function to display cart items when the page loads
+        displayCartItems();
+    </script>
+
+
+
+
+<div class="container">
+    <!-- Your products and other content here -->
+
+    <!-- Checkout button -->
+    <button class="checkout-btn" onclick="checkout()">اتمام الشراء</button>
+
+    <!-- Thank you message (initially hidden) -->
+    <div id="thank-you-msg" class="thank-you-msg" style="display: none;">
+        <p>شكرًا لكم على شرائكم من متجر عتيق. ستتلقون إيصال الشراء في بريدكم الإلكتروني قريبًا!</p>
+    </div>
+</div>
+
+</main>
+<script src="script.js"></script>
+
+
+<div class="footer">
+    <div class="contact-page">
+        <h2>لإستفساراتكم او للتواصل معنا</h2>
+        <div class="contact-info">
+       <h3>نستقبل مكالماتكم عبر هاتفنا</h3>
+       <p>+9660563947284</p>
+       <br>
+       <h3>او رسائلكم عبر ايميل المتجر</h3>
+       <p>ateeq@store.com</p>
+    </div>
+    </div> 
+
+    © 2024 متجر عتيق. جميع الحقوق محفوظة.
+</div>
+</body>
+</html>

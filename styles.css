@@ -372,7 +372,8 @@ padding: 40px;
         padding: 20px; /* Adjust header padding for better spacing */
     }
     nav ul li {
-margin-right: 5px; /* Reduce margin between navigation items */
+        margin: 5px;
+
     }
     img {
         width: 150px; /* Reduce image size for better fit */

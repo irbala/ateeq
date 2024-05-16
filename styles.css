@@ -354,37 +354,86 @@ padding: 40px;
         width: 100%;
         margin: auto;
         text-align: center;
+        overflow-x: hidden;
     }
     main {
-        margin-top: 270px; /* Adjust main margin for smaller screens */
+        margin-top: 235px; /* Adjust main margin for smaller screens */
     }
-    
-    .contact-page {
-        padding: 0;
-    }
-    .contact-info {
-        margin: 0;
-        padding: 0;
-        width: 100%; /* Adjust contact info width for smaller screens */
-    }
+
 
       /* Additional adjustments for smaller screens */
       #header {
         height: 80px; /* Decrease header height for better visibility */
     }
     .header {
-        
+        display: flex;
+        flex-direction: column;
         text-align: center;
         padding: 20px; /* Adjust header padding for better spacing */
     }
     nav ul li {
-        margin: 5px;
-display: flex;       
-flex-direction: column;
 margin-right: 5px; /* Reduce margin between navigation items */
     }
     img {
         width: 150px; /* Reduce image size for better fit */
         margin: 20px; /* Adjust image margin for better spacing */
+    }
+
+    .shop-for-more-btn {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        background-color: #6b5d47;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #f1f1eb;
+        font-weight: bold;
+        transition: background-color 0.3s ease; /* Smooth transition */
+        opacity: 80%;
+    padding: 10px;
+    }
+    
+    .shop-for-more-btn:hover {
+    
+        background-color: #504635;
+    
+    }
+
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #6B6347;
+    }
+    .contact-page h2 {
+        font-size: 17px;
+    }
+    .contact-info h3 {
+        font-size: 15px;
+        margin: 10px;
+    
+    }
+    .contact-info p {
+        font-size: 15px;
+        margin: 10px;
+    
+    }
+    
+    
+    
+    
+    /* Footer Styles */
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: #E4E3D8;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #d4d3c9; /* Header border */
+    
+        border-bottom: 1px solid #d4d3c9; /* Header border */
     }
 }

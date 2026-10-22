@@ -179,6 +179,12 @@ margin: 30px;
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+.checkout-btn:disabled,
+.add-to-cart-btn:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
 .checkout-btn:hover {
 
     background-color: #6b634741;
@@ -251,24 +257,6 @@ padding: 40px;
     font-size: 16px;
 }
 
-/* Cart Styles */
-.cart {
-    display: none; /* Hide cart by default */
-    position: absolute;
-    top: calc(100% + 10px); /* Adjust the distance from the button */
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 999; /* Ensure the cart appears above other content */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
-}
-
-.show-cart-btn:focus + .cart,
-.cart:hover {
-    display: block; /* Show cart when button is focused or cart is hovered */
-}
-
 .add-to-cart-btn {
     color: #6B6347;
     display: inline-block;
@@ -286,19 +274,6 @@ padding: 40px;
 
 }
 
-.add-to-cart-btn {
-    color: #6B6347;
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: #6b634727;
-    border-radius: 5px;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #6b634741;
-
-}
 
 .contact-page {
     display: flex;

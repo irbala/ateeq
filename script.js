@@ -1,50 +1,79 @@
-let totalPrice = 0;
+// The cart is kept in localStorage so it survives moving between pages
+function getCart() {
+    return JSON.parse(localStorage.getItem('cartItems')) || [];
+}
 
-// Function to add a product to the cart
-function addToCart(productName, price) {
-    // Create an object to represent the product
-    const product = { name: productName, price: price };
-    // Get the existing cart items from local storage or create an empty array
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    // Add the product to the cart items array
-    cartItems.push(product);
-    // Store the updated cart items back in local storage
+function saveCart(cartItems) {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
 
-// Function to update the cart display
+// Function to add a product to the cart
+function addToCart(productName, price, button) {
+    const cartItems = getCart();
+    cartItems.push({ name: productName, price: price });
+    saveCart(cartItems);
+
+    // Let the customer know the product was added
+    if (button) {
+        const originalText = button.textContent;
+        button.textContent = 'تمت الإضافة ✓';
+        button.disabled = true;
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+        }, 1500);
+    }
+}
+
+// Function to show the cart items and total on the cart page
 function updateCart() {
-    const cartItems = document.getElementById('cart-items');
-    cartItems.innerHTML = '';
-    // Retrieve cart items from local storage
-    const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    storedCartItems.forEach(item => {
+    const cartList = document.getElementById('cart-items');
+    if (!cartList) {
+        return; // Not on the cart page
+    }
+
+    const cartItems = getCart();
+    cartList.innerHTML = '';
+
+    if (cartItems.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'السلة فارغة';
+        cartList.appendChild(li);
+    }
+
+    cartItems.forEach(item => {
         const li = document.createElement('li');
         li.textContent = `${item.name} - ${item.price} ريال`;
-        cartItems.appendChild(li);
+        cartList.appendChild(li);
     });
-    // Calculate and display the total price
-    document.getElementById('total-price').textContent = `المجموع: ${totalPrice} ريال`;
+
+    const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+    const totalElement = document.getElementById('total-price');
+    if (totalElement) {
+        totalElement.textContent = `المجموع: ${totalPrice} ريال`;
+    }
+
+    const checkoutButton = document.querySelector('.checkout-btn');
+    if (checkoutButton) {
+        checkoutButton.disabled = cartItems.length === 0;
+    }
 }
 
 // Function to handle the checkout process
 function checkout() {
-    alert('شكرًا لكم على شرائكم من متجر عتيق. ستتلقون إيصال الشراء في بريدكم الإلكتروني قريبًا!');
-    // Clear the cart items from local storage
+    if (getCart().length === 0) {
+        return;
+    }
     localStorage.removeItem('cartItems');
-    // Update the cart display
     updateCart();
-}
 
-// Function to toggle the visibility of the cart
-function toggleCart() {
-    const cartDiv = document.getElementById('cart');
-    if (cartDiv.style.display === 'none' || cartDiv.style.display === '') {
-        cartDiv.style.display = 'block';
-    } else {
-        cartDiv.style.display = 'none';
+    const thankYouMessage = document.getElementById('thank-you-msg');
+    if (thankYouMessage) {
+        thankYouMessage.hidden = false;
     }
 }
+
+document.addEventListener('DOMContentLoaded', updateCart);
 
 
 window.onscroll = function() {scrollFunction()};

@@ -28,44 +28,20 @@
     <div class="container">
         <h2>سلة التسوق</h2>
         <ul id="cart-items">
-            <!-- Cart items will be added here dynamically using JavaScript -->
+            <!-- Cart items are added here by script.js -->
         </ul>
+        <div id="total-price">المجموع: 0 ريال</div>
     </div>
-    <script src="script.js"></script>
-    <script>
-        // Function to display cart items
-        function displayCartItems() {
-            // Get the cart items from local storage
-            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            // Get the UL element where cart items will be displayed
-            const cartList = document.getElementById('cart-items');
-            // Clear any existing content
-            cartList.innerHTML = '';
-            // Loop through each cart item and create a list item to display it
-            cartItems.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = `${item.name} - ${item.price} ريال`;
-                cartList.appendChild(li);
-            });
-        }
-        // Call the function to display cart items when the page loads
-        displayCartItems();
-    </script>
 
+    <div class="container">
+        <!-- Checkout button -->
+        <button class="checkout-btn" onclick="checkout()">اتمام الشراء</button>
 
-
-
-<div class="container">
-    <!-- Your products and other content here -->
-
-    <!-- Checkout button -->
-    <button class="checkout-btn" onclick="checkout()">اتمام الشراء</button>
-
-    <!-- Thank you message (initially hidden) -->
-    <div id="thank-you-msg" class="thank-you-msg" style="display: none;">
-        <p>شكرًا لكم على شرائكم من متجر عتيق. ستتلقون إيصال الشراء في بريدكم الإلكتروني قريبًا!</p>
+        <!-- Thank you message (shown after checkout) -->
+        <div id="thank-you-msg" class="thank-you-msg" hidden>
+            <p>شكرًا لكم على شرائكم من متجر عتيق. ستتلقون إيصال الشراء في بريدكم الإلكتروني قريبًا!</p>
+        </div>
     </div>
-</div>
 
 </main>
 <script src="script.js"></script>
@@ -76,10 +52,10 @@
         <h2>لإستفساراتكم او للتواصل معنا</h2>
         <div class="contact-info">
        <h3>نستقبل مكالماتكم عبر هاتفنا</h3>
-       <p>+9660563947284</p>
+       <p><a href="tel:+966563947284" dir="ltr">+966 56 394 7284</a></p>
        <br>
        <h3>او رسائلكم عبر ايميل المتجر</h3>
-       <p>ateeq@store.com</p>
+       <p><a href="mailto:ateeq@store.com">ateeq@store.com</a></p>
     </div>
     </div> 
 

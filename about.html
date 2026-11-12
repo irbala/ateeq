@@ -4,76 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر عتيق</title>
+    <meta name="description" content="متجر عتيق: عطور سعودية تجمع بين الأصالة والحداثة. عبق التراث، روح الفخر.">
+    <title>عن عتيق | متجر عتيق</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header id="header">
-        <div class="header">
-            <div class="brand-header">
-                <h1> متجر عتيق</h1>
-                <h3>   عبق التراث، روح الفخر</h3>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="shop.html">المتجر</a></li>
-                    <li><a href="about.html">عن عتيق</a></li>
-                    <li><a href="cart.html" class="cart-btn">سلة التسوق</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <span class="brand-name">متجر عتيق</span>
+            <span class="brand-tagline">عبق التراث، روح الفخر</span>
+        </a>
+        <nav aria-label="القائمة الرئيسية">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="about.html" aria-current="page">عن عتيق</a></li>
+                <li><a href="cart.html" class="cart-link">سلة التسوق <span class="cart-count" id="cart-count" hidden>0</span></a></li>
+            </ul>
+        </nav>
     </header>
 
+    <main>
+        <h1>حول متجرنا عتيق</h1>
 
-    
-<main>
-    <div class="about-section">
-        <h2>حول متجرنا عتيق</h2>
-            شعارنا: "عبق التراث، روح الفخر"<br>
-            كلماتنا: أصالة، فخامة، تراث<br>
-        <p>قصة العلامة التجارية: "عتيق" هو مزيج بين الأصالة والحداثة، يقدم متجرنا تجربة تسوق فريدة لعشاق العطور السعودية. نحن نسعى للمحافظة على التراث العطري السعودي وتعزيزه من خلال منتجاتنا الفاخرة التي تجمع بين الجودة والتميز. يتيح لك متجر "عتيق" اكتشاف الروائح الفريدة التي تعبق بتاريخنا العريق، مما يثري تجربتك العطرية ويسافر بك في رحلة إلى عالم الذكريات والتراث.</p>
-    </div>
+        <section class="about-section">
+            <p>شعارنا: "عبق التراث، روح الفخر"<br>
+                كلماتنا: أصالة، فخامة، تراث</p>
+            <p>قصة العلامة التجارية: "عتيق" هو مزيج بين الأصالة والحداثة، يقدم متجرنا تجربة تسوق فريدة لعشاق العطور السعودية. نحن نسعى للمحافظة على التراث العطري السعودي وتعزيزه من خلال منتجاتنا الفاخرة التي تجمع بين الجودة والتميز. يتيح لك متجر "عتيق" اكتشاف الروائح الفريدة التي تعبق بتاريخنا العريق، مما يثري تجربتك العطرية ويسافر بك في رحلة إلى عالم الذكريات والتراث.</p>
+        </section>
 
-    <div class="ateeq-team">
-        <h2>فريق عتيق</h2>
-        <ul class="team-list">
-            <li>مي خالد العبري</li>
-            <li>جود نيف المطيري</li>
-            <li>حور محمد المغيربي</li>
-            <li>بتول حسام درويش</li>
-            <li>هنادي عماد حكمي</li>
-            <li>هتون ابراهيم مكاوي</li>
-        </ul>
+        <section class="about-section">
+            <h2>فريق عتيق</h2>
+            <ul class="team-list">
+                <li>مي خالد العبري</li>
+                <li>جود نيف المطيري</li>
+                <li>حور محمد المغيربي</li>
+                <li>بتول حسام درويش</li>
+                <li>هنادي عماد حكمي</li>
+                <li>هتون ابراهيم مكاوي</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>هويتنا البصرية</h2>
+            <img src="img/brand-board.jpg" alt="لوحة الهوية البصرية لمتجر عتيق: الشعار والألوان والخطوط" class="brand-board" loading="lazy">
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <h2>لإستفساراتكم او للتواصل معنا</h2>
+        <div class="contact-info">
+            <p>نستقبل مكالماتكم عبر هاتفنا <a href="tel:+966563947284" dir="ltr">+966 56 394 7284</a></p>
+            <p>او رسائلكم عبر ايميل المتجر <a href="mailto:ateeq@store.com">ateeq@store.com</a></p>
         </div>
+        <p class="copyright">© 2026 متجر عتيق. جميع الحقوق محفوظة.</p>
+    </footer>
 
-
-    <div class="visual-identity">
-        <h1>هويتنا البصرية</h1>
-        <img src="img/brand-board.jpg" alt="لوحة الهوية البصرية لمتجر عتيق: الشعار والألوان والخطوط" class="visual-identity-pic">
-    </div>
-  
-
-
-  
-</main>
     <script src="script.js"></script>
-
-    <div class="footer">
-        <div class="contact-page">
-            <h2>لإستفساراتكم او للتواصل معنا</h2>
-            <div class="contact-info">
-           <h3>نستقبل مكالماتكم عبر هاتفنا</h3>
-           <p><a href="tel:+966563947284" dir="ltr">+966 56 394 7284</a></p>
-           <br>
-           <h3>او رسائلكم عبر ايميل المتجر</h3>
-           <p><a href="mailto:ateeq@store.com">ateeq@store.com</a></p>
-        </div>
-        </div> 
-    
-        © 2024 متجر عتيق. جميع الحقوق محفوظة.
-    </div>
 </body>
 
 </html>

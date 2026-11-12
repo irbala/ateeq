@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر عتيق</title>
+    <meta name="description" content="متجر عتيق: عطور سعودية تجمع بين الأصالة والحداثة. عبق التراث، روح الفخر.">
+    <title>المتجر | متجر عتيق</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header id="header">
-        <div class="header">
-            <div class="brand-header">
-                <h1> متجر عتيق</h1>
-                <h3>   عبق التراث، روح الفخر</h3>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="shop.html">المتجر</a></li>
-                    <li><a href="about.html">عن عتيق</a></li>
-                    <li><a href="cart.html" class="cart-btn">سلة التسوق</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <span class="brand-name">متجر عتيق</span>
+            <span class="brand-tagline">عبق التراث، روح الفخر</span>
+        </a>
+        <nav aria-label="القائمة الرئيسية">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="shop.html" aria-current="page">المتجر</a></li>
+                <li><a href="about.html">عن عتيق</a></li>
+                <li><a href="cart.html" class="cart-link">سلة التسوق <span class="cart-count" id="cart-count" hidden>0</span></a></li>
+            </ul>
+        </nav>
     </header>
 
-<main> 
-
-    <div class="product">
+    <main>
         <h1>منتجات عتيق</h1>
-        <img src="img/perfume-jazan-fruit.jpg" alt="عطر فاكهة جازان">
-        <div class="product-name">فاكهة جازان</div>
-        <div class="product-price">120 ريال</div>
-        <button class="add-to-cart-btn" onclick="addToCart('فاكهة جازان', 120, this)">أضف إلى السلة</button>
-    </div>
-    <div class="product">
-        <img src="img/perfume-taif-rose.jpg" alt="عطر ورد الطائف">
-        <div class="product-name">ورد الطائف</div>
-        <div class="product-price">150 ريال</div>
-        <button class="add-to-cart-btn" onclick="addToCart('ورد الطائف', 150, this)">أضف إلى السلة</button>
-    </div>
-    <div class="product">
-        <img src="img/perfume-riyadh-oud.jpg" alt="عطر عود الرياض">
-        <div class="product-name">عود الرياض</div>
-        <div class="product-price">200 ريال</div>
-        <button class="add-to-cart-btn" onclick="addToCart('عود الرياض', 200, this)">أضف إلى السلة</button>
-    </div>
 
-    <div class="go-to-cart"><a href="cart.html" class="go-to-cart-btn">اضغط هنا للدفع</a></div>
+        <ul class="product-grid">
+            <li class="product">
+                <img src="img/perfume-jazan-fruit.jpg" alt="عطر فاكهة جازان" width="400" height="400">
+                <h2 class="product-name">فاكهة جازان</h2>
+                <p class="product-price">120 ريال</p>
+                <button type="button" class="button add-to-cart" data-name="فاكهة جازان" data-price="120">أضف إلى السلة</button>
+            </li>
+            <li class="product">
+                <img src="img/perfume-taif-rose.jpg" alt="عطر ورد الطائف" width="400" height="400">
+                <h2 class="product-name">ورد الطائف</h2>
+                <p class="product-price">150 ريال</p>
+                <button type="button" class="button add-to-cart" data-name="ورد الطائف" data-price="150">أضف إلى السلة</button>
+            </li>
+            <li class="product">
+                <img src="img/perfume-riyadh-oud.jpg" alt="عطر عود الرياض" width="400" height="400">
+                <h2 class="product-name">عود الرياض</h2>
+                <p class="product-price">200 ريال</p>
+                <button type="button" class="button add-to-cart" data-name="عود الرياض" data-price="200">أضف إلى السلة</button>
+            </li>
+        </ul>
 
-</main>
+        <a href="cart.html" class="button button-dark go-to-cart">اضغط هنا للدفع</a>
+    </main>
 
-<script src="script.js"></script>
-
-
-<div class="footer">
-    <div class="contact-page">
+    <footer class="site-footer">
         <h2>لإستفساراتكم او للتواصل معنا</h2>
         <div class="contact-info">
-       <h3>نستقبل مكالماتكم عبر هاتفنا</h3>
-       <p><a href="tel:+966563947284" dir="ltr">+966 56 394 7284</a></p>
-       <br>
-       <h3>او رسائلكم عبر ايميل المتجر</h3>
-       <p><a href="mailto:ateeq@store.com">ateeq@store.com</a></p>
-    </div>
-    </div> 
+            <p>نستقبل مكالماتكم عبر هاتفنا <a href="tel:+966563947284" dir="ltr">+966 56 394 7284</a></p>
+            <p>او رسائلكم عبر ايميل المتجر <a href="mailto:ateeq@store.com">ateeq@store.com</a></p>
+        </div>
+        <p class="copyright">© 2026 متجر عتيق. جميع الحقوق محفوظة.</p>
+    </footer>
 
-    © 2024 متجر عتيق. جميع الحقوق محفوظة.
-</div>
+    <script src="script.js"></script>
 </body>
+
 </html>
